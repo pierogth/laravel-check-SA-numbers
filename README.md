@@ -16,6 +16,6 @@ To run the automatic Unit Tests of this App, you have to run the command:
 <pre>php artisan test</pre>
 in the docker container terminal, so, if you have Docker Desktop GUI you can access on the terminal of the container my-app and run the command above, or alternatively, you can 
 execute a terminal of the container with this command:
-<pre>docker exec -it <mycontainer> bash</pre>
-The placeholder <mycontainer> represent the ID of your Docker container running on your PC, to see it, just run <pre>docker ps</pre> command and see the ID corresponding to container named my-app.
+<pre>docker exec -it |mycontainer| bash</pre>
+The placeholder |mycontainer| represent the ID of your Docker container running on your PC, to see it, just run <pre>docker ps</pre> command and see the ID corresponding to container named my-app.
 After this you can run the command <pre>php artisan test</pre> for phpunit tests.
