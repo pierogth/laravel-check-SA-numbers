@@ -39,6 +39,8 @@ class mobileSANumber
     function check_csv($file)
     {
         $outputArray = [];
+        /* skip line of headers */
+        $csvAsArray = fgetcsv($file);
 
         while (!feof($file)) {
             $csvAsArray = fgetcsv($file);
@@ -47,7 +49,7 @@ class mobileSANumber
                     $this->result = "";
                     $this->action = "";
 
-                    $this->number = $line;
+                    $this->number = $csvAsArray[1];
                     echo $this->number . "\n";
 
                     $lenght = strlen($this->number);
@@ -68,6 +70,7 @@ class mobileSANumber
                         $this->result = "Valid number";
                     } else {
                         $this->result = "Invalid number";
+                        $this->action = "";
                     }
 
                     echo "\n" . $this->result;
