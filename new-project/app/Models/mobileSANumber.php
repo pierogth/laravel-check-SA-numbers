@@ -14,10 +14,11 @@ class mobileSANumber
         if ($lenght == 9) {
             //check if is present +27 prefix, in case not, adding it
             $number = "+27" . $number;
+            $this->action=", added +27";
         } elseif ($lenght == 11) {
             //check if is present + prefix, in case not, adding it
-
             $number = "+" . $number;
+            $this->action=", added +";
         }
         echo "\n" . $number;
         if (preg_match("/^\+27[0-9]{9}$/", $number)) {
@@ -28,10 +29,12 @@ class mobileSANumber
         echo "\n" . $result;
         echo "<script>
     alert('" .
-            $result .
+            $result .$this->action.
             "');
     location='/';
     </script>";
+
+    return $result .$this->action;
     }
     function check_csv($file)
     {
