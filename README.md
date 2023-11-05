@@ -5,7 +5,11 @@ Simple Laravel application that permit to check, and eventually correct a single
 In order to run this application, you need Docker (Version 24 or above) and Docker Compose installed in your system.
 
 # How to run
-Just run the command:
+Clone this repository in any folder with the command:
+<pre>git clone https://github.com/pierogth/laravel-check-SA-numbers.git </pre>
+Then move to the directory just created by the clone command:
+<pre>cd laravel-check-SA-numbers</pre>
+Then just run the command:
 <pre>docker compose up</pre>
 it may takes some minutes for pulling images from docker hub repository, for this project have been used the bitnami official image for Laravel 10 and the official image for MariaDB and PHPMyAdmin. However, the DB is not used at all, I initially think may be useful but then I understood that the requirements not need persistance in any data, because I chose to use CSV file also for return the response with elaborated results.
 
