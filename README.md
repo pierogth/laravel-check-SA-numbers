@@ -11,7 +11,7 @@ Then move to the directory just created by the clone command:
 <pre>cd laravel-check-SA-numbers</pre>
 Then just run the command:
 <pre>docker compose up</pre>
-it may takes some minutes for pulling images from docker hub repository, for this project have been used the bitnami official image for Laravel 10 and the official image for MariaDB and PHPMyAdmin. However, the DB is not used at all, I initially think may be useful but then I understood that the requirements not need persistance in any data, because I chose to use CSV file also for return the response with elaborated results.
+it may takes some minutes for pulling images from docker hub repository, for this project have been used the bitnami official image for Laravel 10 and the official image for MariaDB and PHPMyAdmin. However, the DB is not used at all, I initially think may be useful but then I understood that the requirements doesn't need persistance in data, because I chose to use CSV file also for return the response with elaborated results.
 
 When docker compose up command is done, you can access to the app whit a browser pointing on <a href="http://localhost:8000">localhost:8000</a> and use the App.
 
